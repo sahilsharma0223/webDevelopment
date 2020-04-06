@@ -1,0 +1,96 @@
+
+
+.calculator{
+     background-color:#d9d9d9;
+     width: 14.2rem;
+     height:22.5rem;
+     padding:10px 10px 0;
+     border-radius: 8px;
+    position: absolute;
+    top:5rem;
+    left: 35rem;
+    box-shadow: 3px 8px 30px #999999, inset -1px -6px 10px #89847e;
+}
+button{
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  border-radius: 15px;
+  border-style: none;
+  margin: 4px;
+  height: 40px;
+  width: 45px;
+  background-color: #686868;
+  color: #cccabf;
+  box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
+  }
+
+button:active{
+  transform: translateY(3px);
+}
+.logo{
+  font-family: 'Gotu', sans-serif;
+  font-size: 1.3rem;
+  padding: 0 0 0 1px;
+}
+
+.red-button{
+  background-color: #993333;
+}
+
+.symbol{
+  background-color: #3f3f3d;
+  color:#cccabf;
+
+}
+
+.screen{
+  font-size: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #6b7b6e;
+  border-radius: 4px;
+  text-align: right;
+  width: 13.6rem;
+  margin: 0;
+  padding: 0 3px;
+}
+
+.answer{
+  padding:3px 3px;
+  border-style: none none dotted;
+  border-width: 0.9px;
+}
+
+.entry{
+   padding: 0 3px;
+ }
+
+.buttons{
+  padding: 4px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  padding-right: 0;
+  margin: 0;
+}
+
+.Hover:hover{
+  background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color:#378de5;
+}
+
+
+.zero{
+  width: 6.4rem;
+}
+.equal{
+  position: absolute;
+  left: 11.5rem;
+  padding-top: 1.7rem;
+  padding-bottom: 3.7rem;
+  background: #e2e2d3;
+  color: black;
+  font-weight: bold;
+}
+
+.logo2{
+  font-size: 0.65rem;
+}
