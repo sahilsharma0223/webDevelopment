@@ -46,6 +46,10 @@ h3{
 	background-color:#378de5;
 }
 
+.myButton:active{
+  transform: translateY(3px);
+}
+
 input{
   padding:4px;
   margin:5px;
