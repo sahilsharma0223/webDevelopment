@@ -1,7 +1,7 @@
 
 
 .calculator{
-     background-color:#d9d9d9;
+     background-color:#ABB2B9 ;
      width: 14.2rem;
      height:22.5rem;
      padding:10px 10px 0;
@@ -9,7 +9,7 @@
     position: absolute;
     top:5rem;
     left: 35rem;
-    box-shadow: 3px 8px 30px #999999, inset -1px -6px 10px #89847e;
+    box-shadow:4px 8px 34px #999999, inset -1px -6px 10px 3px #89847e;
 }
 button{
   font-family: 'Patrick Hand', cursive;
@@ -24,22 +24,33 @@ button{
   box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
   }
 
+img{
+  position: relative;
+  top: 2.5px;
+  right: 0.5px;
+
+}
+
 button:active{
   transform: translateY(3px);
 }
 .logo{
   font-family: 'Gotu', sans-serif;
   font-size: 1.3rem;
+  color: white;
   padding: 0 0 0 1px;
 }
 
 .red-button{
-  background-color: #993333;
+  background-color: #A93226;
+  text-align: bottom;
+  color: black;
 }
 
 .symbol{
-  background-color: #3f3f3d;
-  color:#cccabf;
+  background-color: #D35400;
+  color:black;
+  font-weight: 1000px;
 
 }
 
