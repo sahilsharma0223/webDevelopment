@@ -175,7 +175,6 @@ function equal(){
     resString = resString.slice(0,18);
   }
 
-
   $(".answer").text(resString);
   numPrint = resString;
   t=1;
