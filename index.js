@@ -15,21 +15,24 @@ var numPrint='';
           numPrint = numPrint+sym;
      }
     console.log(numPrint);
+    console.log(lastSymbol);
+    console.log(sym);
       if((lastSymbol==='.'||lastSymbol==='/'||lastSymbol==='*'||lastSymbol==='+'||lastSymbol==='-')&&(sym==='/'||sym==='*'||sym==='-'||sym==='+'||sym==='.')&&(numPrint.length<19))
       {
            numPrint = numPrint.substring(0,numPrint.length-2)+sym;
+           console.log(lastSymbol);
+           console.log(sym);
       }
-      if(sym==='+'||sym==='-'||sym==='*'||sym==='/'){
         lastSymbol = sym;
-      }
 
+      console.log(lastSymbol);
+      console.log(sym);
       console.log(numPrint);
      if(sym==='='){
        var symerror = numPrint.substring(numPrint.length-1,numPrint.length);
        var symerror2 = numPrint.substring(0,1);
        if(symerror==='*'||symerror==='/'||symerror==='-'||symerror==='+'||symerror==='.'||symerror2==='*'||symerror2==='/'){
          $(".answer").text("Sytax Error!");
-
          t=0;
        }
        else{
