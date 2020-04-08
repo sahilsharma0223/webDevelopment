@@ -9,7 +9,7 @@
     position: absolute;
     top:5rem;
     left: 35rem;
-    box-shadow: 3px 8px 30px #999999, inset -1px -6px 10px #89847e;
+    box-shadow:4px 8px 34px #999999, inset -1px -6px 10px 3px #89847e;
 }
 button{
   font-family: 'Patrick Hand', cursive;
@@ -24,27 +24,38 @@ button{
   box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
   }
 
+img{
+  position: relative;
+  top: 2.5px;
+  right: 0.5px;
+
+}
+
 button:active{
   transform: translateY(3px);
 }
 .logo{
   font-family: 'Gotu', sans-serif;
   font-size: 1.3rem;
+  color: black;
   padding: 0 0 0 1px;
 }
 
 .red-button{
-  background-color: #993333;
+  background-color: #A93226;
+  text-align: bottom;
+  color: black;
 }
 
 .symbol{
-  background-color: #3f3f3d;
-  color:#cccabf;
+  background-color: #D35400;
+  color:black;
+  font-weight: 1000px;
 
 }
 
 .screen{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: 'Orbitron', sans-serif;
   background-color: #6b7b6e;
   border-radius: 4px;
@@ -55,13 +66,16 @@ button:active{
 }
 
 .answer{
+  height: 1.9rem;
   padding:3px 3px;
   border-style: none none dotted;
   border-width: 0.9px;
 }
 
 .entry{
+
    padding: 0 3px;
+   padding-top: 3px;
  }
 
 .buttons{

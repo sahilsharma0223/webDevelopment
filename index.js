@@ -1,80 +1,181 @@
-var t=0;
-var index = 0;
-var num1 = 0;
-var num2 = 0;
-var symbol =0;
-var result = 0;
-var numPrint='';
-  $("button").click (function() {
-     var num = this.textContent;
-     var sym = this.value;
+///////////variable declaration//////////
 
-     if(sym==='/'||sym==='*'||sym==='+'||sym==='-'){
-       num1 = parseInt(numPrint);
-       console.log(num1);
-       symbol = sym;
-       console.log(symbol);
-       index = numPrint.length;
-       console.log(index);
+var t=0;
+var result = 0;
+var resString = '';
+var lastSymbol='';
+var numPrint='';
+
+ /////////Added Event Listener///////
+
+  $("button").click (function() {
+     var sym = this.value;
+     if(sym!=='AC'&&sym!=='CE'&&sym!=='='&&numPrint.length<19)
+     {
+          numPrint = numPrint+sym;
      }
+    console.log(numPrint);
+      if((lastSymbol==='.'||lastSymbol==='/'||lastSymbol==='*'||lastSymbol==='+'||lastSymbol==='-')&&(sym==='/'||sym==='*'||sym==='-'||sym==='+'||sym==='.')&&(numPrint.length<19))
+      {
+           numPrint = numPrint.substring(0,numPrint.length-2)+sym;
+      }
+      if(sym==='+'||sym==='-'||sym==='*'||sym==='/'){
+        lastSymbol = sym;
+      }
+
+      console.log(numPrint);
      if(sym==='='){
-        num2 = parseInt(numPrint.substring(index+1,numPrint.length));
-        console.log(num2);
-        index = 0;
-       equal(symbol);
+       var symerror = numPrint.substring(numPrint.length-1,numPrint.length);
+       var symerror2 = numPrint.substring(0,1);
+       if(symerror==='*'||symerror==='/'||symerror==='-'||symerror==='+'||symerror==='.'||symerror2==='*'||symerror2==='/'){
+         $(".answer").text("Sytax Error!");
+
+         t=0;
+       }
+       else{
+       equal();
      }
-     if(num==='AC'){
+     }
+
+     if(sym==='AC'){
        AC();
      }
-     else if(num==='CE'){
+     if(sym==='CE'){
        CE();
      }
-     else if(num!=='AC'&&num!=='CE'&&num!=='='){
-        entryPrint(num);
+     if(sym!=='AC'&&sym!=='CE'&&sym!=='='){
+        entryPrint();
      }
 
   });
 
-function entryPrint(num){
-   console.log(numPrint+num);
-   $(".entry").text(numPrint+num);
-       numPrint = numPrint+num;
+
+///////////Function for printing the entries////////////////
+
+function entryPrint(){
+  if(numPrint.length===13){
+    $(".entry").css("font-size","1.1rem");
+    $(".entry").css("padding-top","0.47rem");
+    if(t===0){
+        $(".entry").text(numPrint);
+    }
+    else{
+      $(".answer").text('0');
+      $(".entry").text(numPrint);
+    }
+  }
+ else if(numPrint.length===15)
+ {
+   $(".entry").css("font-size","0.9rem");
+   $(".entry").css("padding-top","0.7rem");
+   if(t===0){
+       $(".entry").text(numPrint);
+   }
+   else{
+     $(".answer").text('0');
+     $(".entry").text(numPrint);
+   }
+ }
+ else if(numPrint.length>18)
+ {
+   $(".answer").text("limit exceed");
+   numPrint = numPrint.substring(0,numPrint.length-1);
+   if(t===0){
+       $(".entry").text(numPrint);
+   }
+   else{
+     $(".answer").text('0');
+     $(".entry").text(numPrint);
+   }
+ }
+
+  else{
+    if(t===0){
+      $(".entry").text(numPrint);
+    }
+     else{
+       $(".answer").text('0');
+       $(".entry").text(numPrint);
+     }
+  }
+
 }
+
+//////////Function for clearing the screen////////////
 
 function AC(){
+  $(".entry").css("font-size","1.3rem");
+  $(".entry").css("padding-top","0rem");
+  $(".answer").css("font-size","1.3rem");
+  $(".answer").css("padding-top","0rem");
   $(".entry").text("0");
   $(".answer").text("0");
-  numPrint=[];
+  numPrint='';
+  resString='';
+  t=0;
+  reserve = '';
 }
 
+
+///////////////Function for deleting last entry///////////////
+
+
 function CE(){
+$(".answer").text("0");
+$(".answer").css("font-size","1.3rem");
+$(".answer").css("padding-top","0rem");
+  if(t===1){
+
+    numPrint = reserve;
+  }
   numPrint = numPrint.slice(0,-1);
-  console.log(numPrint.length);
+  if(numPrint.length<13){
+    $(".entry").css("font-size","1.3rem");
+    $(".entry").css("padding-top","0.15rem");
+  }
+ else if(numPrint.length<15)
+ {
+   $(".entry").css("font-size","1.1rem");
+   $(".entry").css("padding-top","0.47rem");
+ }
+
+  console.log(numPrint);
   if(numPrint.length===0){
     $(".entry").text("0");
   }
   else{
       $(".entry").text(numPrint);
   }
+  t=0;
 }
 
-function equal(symbol){
-  if(symbol==='+'){
-    result = num1 + num2;
+////////Function for calculation////////////
+
+function equal(){
+
+  result = eval(numPrint);
+  reserve = numPrint;
+  resString = result.toString();
+  if((resString.length>12)&&resString.length<15){
+    $(".answer").css("font-size","1.1rem");
+    $(".answer").css("padding-top","0.1rem");
   }
-  else if(symbol==='-'){
-    result = num1-num2;
+  else if((resString.length>=15)&&(resString.length<19))
+  {
+    $(".answer").css("font-size","0.9rem");
+    $(".answer").css("padding-top","0.2rem");
   }
-  else if(symbol==='*'){
-    result = num1*num2;
+  else if(resString.length>=19){
+    $(".answer").css("font-size","0.9rem");
+    $(".answer").css("padding-top","0.7rem");
+    resString = resString.slice(0,18);
   }
-  else{
-    result = num1/num2;
-  }
-  console.log(num1);
-  console.log(num2);
-  console.log(result);
-  $(".answer").text(result);
-  numPrint=result.toString();
-  console.log(numPrint)
+
+
+  $(".answer").text(resString);
+  numPrint = resString;
+  t=1;
 }
+
+
+/////////END////////////////
