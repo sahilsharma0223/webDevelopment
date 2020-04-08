@@ -24,7 +24,7 @@ var numPrint='';
            console.log(sym);
       }
         lastSymbol = sym;
-        
+
       console.log(lastSymbol);
       console.log(sym);
       console.log(numPrint);
@@ -90,6 +90,7 @@ function entryPrint(){
      $(".answer").text('0');
      $(".entry").text(numPrint);
    }
+   t=0;
  }
 
   else{

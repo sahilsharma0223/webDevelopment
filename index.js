@@ -90,6 +90,7 @@ function entryPrint(){
      $(".answer").text('0');
      $(".entry").text(numPrint);
    }
+   t=0;
  }
 
   else{
