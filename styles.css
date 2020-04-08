@@ -5,10 +5,11 @@
      width: 14.2rem;
      height:22.5rem;
      padding:10px 10px 0;
-     border-radius: 8px;
+     position: fixed;
+     /* border-radius: 8px;
     position: absolute;
     top:5rem;
-    left: 35rem;
+    left: 35rem; */
     box-shadow:4px 8px 34px #999999, inset -1px -6px 10px 3px #89847e;
 }
 button{
@@ -107,4 +108,24 @@ button:active{
 
 .logo2{
   font-size: 0.65rem;
+}
+
+.divide{
+  background-color: #3EEE21;
+}
+.times{
+  background-color: #ECE635;
+}
+.sub{
+  background-color: #EC3577;
+}
+.add{
+  background-color: #3558EC;
+}
+
+@media screen and (min-width: 50px) {
+  .calculator{
+      position: absolute;
+      left:45%;
+  }
 }
