@@ -129,11 +129,11 @@ $(".answer").css("padding-top","0rem");
     numPrint = reserve;
   }
   numPrint = numPrint.slice(0,-1);
-  if(numPrint.length<13){
+  if(numPrint.length>0&&numPrint.length<13){
     $(".entry").css("font-size","1.3rem");
     $(".entry").css("padding-top","0.15rem");
   }
- else if(numPrint.length<15)
+ else if(numPrint.length>0&&numPrint.length<15)
  {
    $(".entry").css("font-size","1.1rem");
    $(".entry").css("padding-top","0.47rem");
