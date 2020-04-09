@@ -13,6 +13,7 @@ var numPrint='';
      if(sym!=='AC'&&sym!=='CE'&&sym!=='='&&numPrint.length<19)
      {
           numPrint = numPrint+sym;
+          t=0;
      }
     console.log(numPrint);
     console.log(lastSymbol);
@@ -23,7 +24,7 @@ var numPrint='';
            console.log(lastSymbol);
            console.log(sym);
       }
-        lastSymbol = sym;
+      lastSymbol = sym;
 
       console.log(lastSymbol);
       console.log(sym);
