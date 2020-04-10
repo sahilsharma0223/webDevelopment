@@ -6,10 +6,7 @@
      height:22.5rem;
      padding:10px 10px 0;
      position: fixed;
-     /* border-radius: 8px;
-    position: absolute;
-    top:5rem;
-    left: 35rem; */
+      border-radius: 8px;
     box-shadow:4px 8px 34px #999999, inset -1px -6px 10px 3px #89847e;
 }
 button{
@@ -128,4 +125,5 @@ button:active{
       position: absolute;
       left:45%;
   }
+
 }
