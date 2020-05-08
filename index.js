@@ -5,15 +5,17 @@ var result = 0;
 var resString = '';
 var lastSymbol='';
 var numPrint='';
-
+var dot=1;
  /////////Added Event Listener///////
 
   $("button").click (function() {
      var sym = this.value;
      if(sym!=='AC'&&sym!=='CE'&&sym!=='='&&numPrint.length<19)
      {
-          numPrint = numPrint+sym;
-          t=0;
+           numPrint = numPrint+sym;
+           t=0;
+      
+
      }
     console.log(numPrint);
     console.log(lastSymbol);
