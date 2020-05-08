@@ -6,6 +6,8 @@
      height:23rem;
      padding:10px 10px 0;
      position: fixed;
+     margin-left: 40%;
+     margin-top: 10%;
     border-radius: 8px;
     box-shadow:4px 8px 34px #999999, inset -1px -6px 10px 3px #89847e;
 }
